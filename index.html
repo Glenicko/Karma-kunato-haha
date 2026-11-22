@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Karma kunato haha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body> 
+
+  <!-- 1. UNWRAP LANDING SCREEN -->
+  <div id="unwrap-screen" class="screen active">
+    <div class="unwrap-content">
+      <div class="gift-ascii" aria-hidden="true">
+   _   _
+  ( `^` )
+ .-'---'-.
+ |   |   |
+ |---+---|
+ |   |   |
+ '-------'
+      </div>
+      <h1 class="unwrap-title">Heloo adi here's my little gift for you, I hope magustuhan mo!
+      </h1>
+      <p class="unwrap-subtitle">Tap muna buseng</p>
+      <div class="tap-pulse">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+          <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/>
+          <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/>
+          <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MAIN BOUQUET STAGE -->
+  <main id="main-stage" class="screen">
+    <header class="top-bar">
+      <span class="hint-text">Drag to look up or down to the flower:></span>
+    </header>
+
+    <!-- 3D ASCII Canvas Wrapper -->
+    <div id="bouquet-wrapper">
+      <pre id="ascii-canvas" aria-label="Spinning 3D ASCII Flower Bouquet"></pre>
+    </div>
+
+    <!-- Bottom Action Bar with Simple Message Icon -->
+    <footer class="bottom-controls">
+      <button id="open-message-btn" class="message-btn" aria-label="Open message">
+        <span id="unread-badge" class="badge">1</span>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="3"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+      </button>
+      <span class="btn-label">Yoohooo! dito ang tingennn!</span>
+    </footer>
+  </main>
+
+  <!-- 3. LETTER / MESSAGE MODAL -->
+  <div id="message-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="close-message-backdrop"></div>
+    <div class="letter-card">
+      <button id="close-message-btn" class="close-btn" aria-label="Close letter">&times;</button>
+      <div class="lined-paper">
+        <p id="letter-greeting" class="handwriting greeting"></p>
+        <p id="letter-body" class="handwriting body-text"></p>
+        <p id="letter-signoff" class="handwriting signoff"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
