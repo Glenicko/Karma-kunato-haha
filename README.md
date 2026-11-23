@@ -1,2 +1,1 @@
-# Karma-kunato-haha
-haha
+# Basic-communacation-skills
